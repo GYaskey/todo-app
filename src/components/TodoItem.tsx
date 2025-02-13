@@ -1,6 +1,8 @@
+import DeleteButton from './DeleteButton';
+
 interface TodoItemProps {
-  todo: { id: number; title: string; completed: boolean };
-  onDelete: (id: number) => void;
+  todo: { id: string; title: string; completed: boolean }; 
+  onDelete: (id: string) => void; 
 }
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
@@ -11,12 +13,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
       >
         {todo.title}
       </span>
-      <button
-        onClick={() => onDelete(todo.id)}
-        className="ml-4 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
-      >
-        Delete
-      </button>
+      <DeleteButton onDelete={() => onDelete(todo.id)} />
     </div>
   );
 };

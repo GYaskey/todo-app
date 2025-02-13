@@ -1,8 +1,14 @@
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
+
+interface Todo {
+  id: string; 
+  title: string;
+  completed: boolean;
+}
 
 interface TodoListProps {
-  todos: { id: number; title: string; completed: boolean }[];
-  onDelete: (id: number) => void;
+  todos: Todo[];
+  onDelete: (id: string) => void; 
 }
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => {

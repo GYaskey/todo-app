@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 interface TodoFormProps {
   onAddTodo: (title: string) => void;
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (title.trim()) {
       onAddTodo(title);
-      setTitle("");
+      setTitle('');
     }
   };
 
