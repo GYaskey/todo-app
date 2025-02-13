@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tailwind": "NODE_OPTIONS='--loader ts-node/esm' tailwindcss"
   },
   "dependencies": {
     "axios": "^1.7.9",

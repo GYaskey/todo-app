@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TodoItemProps {
   todo: { id: number; title: string; completed: boolean };
   onDelete: (id: number) => void;
@@ -7,11 +5,15 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
   return (
-    <div className="flex justify-between items-center p-4 border rounded-md shadow-md">
-      <span className={todo.completed ? "line-through" : ""}>{todo.title}</span>
+    <div className="bg-white border border-gray-300 shadow- rounded-lg p-4 flex justify-between items-center mh-1/4">
+      <span
+        className={`text-lg ${todo.completed ? "line-through text-gray-500" : "text-gray-900"}`}
+      >
+        {todo.title}
+      </span>
       <button
         onClick={() => onDelete(todo.id)}
-        className="ml-4 text-red-500 hover:text-red-700"
+        className="ml-4 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
       >
         Delete
       </button>

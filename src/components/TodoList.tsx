@@ -1,4 +1,3 @@
-import React from "react";
 import TodoItem from "./TodoItem";
 
 interface TodoListProps {
@@ -8,9 +7,11 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => {
   return (
-    <div className="space-y-4">
+    <div className="flex flex-wrap gap-5">
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} onDelete={onDelete} />
+        <div className="w-1/4" key={todo.id}>
+          <TodoItem todo={todo} onDelete={onDelete} />
+        </div>
       ))}
     </div>
   );
