@@ -12,10 +12,21 @@ A simple Todo app built using Next.js and the JSONPlaceholder API.
 ## Installation
 
 1. Clone the repository:
+
+```js
    git clone <repository-url>
+```
 
 2. Install dependencies:
+
+```js
    npm install
+```
+
 3. Run the development server:
+
+```js
    npm run dev
+```
+
 4. Open your browser and visit `http://localhost:3000`.
