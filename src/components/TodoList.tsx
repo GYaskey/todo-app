@@ -7,9 +7,9 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = ({ todos, onDelete }) => {
   return (
-    <div className="flex flex-wrap gap-5">
+    <div className="grid grid-cols-5 gap-5 justify-center m-auto">
       {todos.map((todo) => (
-        <div className="w-1/4" key={todo.id}>
+        <div className="w-full" key={todo.id}>
           <TodoItem todo={todo} onDelete={onDelete} />
         </div>
       ))}

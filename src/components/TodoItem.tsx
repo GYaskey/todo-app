@@ -5,9 +5,9 @@ interface TodoItemProps {
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onDelete }) => {
   return (
-    <div className="bg-white border border-gray-300 shadow- rounded-lg p-4 flex justify-between items-center mh-1/4">
+    <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-4 flex justify-between items-center min-h-[150px]">
       <span
-        className={`text-lg ${todo.completed ? "line-through text-gray-500" : "text-gray-900"}`}
+        className={`text-lg ${todo.completed ? "line-through text-gray-500" : "text-gray-900"} line-clamp-2`}
       >
         {todo.title}
       </span>
