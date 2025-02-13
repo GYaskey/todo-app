@@ -14,7 +14,7 @@ A simple Todo app built using Next.js and the JSONPlaceholder API.
 1. Clone the repository:
 
 ```js
-   git clone <repository-url>
+   git clone https://github.com/GYaskey/todo-app.git
 ```
 
 2. Install dependencies:
